@@ -1,0 +1,206 @@
+.parent {
+    width: 550px;
+    height: 450px;
+}
+
+/* bg color main div  */
+.bg-main {
+    background: #EFEFEF;
+}
+
+/* 1,8 grids */
+.bg1,
+.bg8 {
+    background: #6F98A8;
+}
+
+/* 2,4 grids*/
+.bg2,
+.bg4 {
+    background: #2B8EAD;
+}
+
+/* 6,7 grids*/
+.bg6,
+.bg7 {
+    background: #BFBFBF;
+}
+
+/* 3,5,9 grids*/
+.bg3,
+.bg5,
+.bg9 {
+    background: #2F454E;
+}
+
+/* text white */
+.text-white {
+    color: white;
+}
+
+/* main container */
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 110px);
+    grid-template-rows: repeat(3, 110px);
+}
+
+/* each grid item class */
+.items {
+    padding: 10px;
+    display: grid;
+    place-items: center;
+    font-size: xxx-large;
+    font-weight: 600;
+}
+
+/* layout for div */
+.layout {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 auto;
+}
+
+/* specify column1 width */
+.column1 {
+    width: 66%;
+}
+
+/* specify column2 width */
+.column2 {
+    width: 33%;
+}
+
+/* specify container width */
+.container-width {
+    width: 50vw;
+}
+
+/* button dirction */
+.buttonDisplay {
+    display: flex;
+    flex-direction: column;
+}
+
+/* margin */
+.m10 {
+    margin: 10px;
+}
+
+/* button background colors */
+.button-color {
+    background: #72C3DC;
+    background-color: #72C3DC;
+}
+
+/* button class */
+.button {
+    align-items: center;
+    border-radius: 4px;
+    display: inline-flex;
+    flex: 0 0 auto;
+    font-weight: 500;
+    justify-content: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    height: 36px;
+    min-width: 64px;
+    padding: 0 16px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-bottom: 3px solid #2e90ae;
+}
+
+/* set label default none */
+.labelClass {
+    display: none;
+}
+
+/* font family  */
+.font {
+    font-family: monospace;
+    font-size: smaller;
+    font-weight: 100;
+    text-align: center;
+}
+
+
+/* responsvie classes of 375px screen */
+@media(max-width : 375px) {
+    .text-center {
+        text-align: center;
+    }
+
+    .layoutBorder {
+        border: 10px solid black;
+        border-radius: 6px;
+    }
+
+    .labelClass {
+        width: 100%;
+        background: #333333;
+        color: white;
+        text-align: center;
+        display: block;
+    }
+}
+
+
+/* responsvie classes of 600px screen */
+@media (max-width: 600px) {
+    .container {
+        display: contents;
+    }
+
+    .bg-main {
+        background: #fff;
+    }
+
+    .container-width {
+        width: 100vw;
+    }
+
+    .items {
+        width: 68vw;
+    }
+
+    .itemsStack {
+        background: #EFEFEF;
+        border-left-style: inset;
+        border-left-width: thick;
+        color: #000000;
+        font-size: medium;
+        margin: 4px;
+    }
+
+}
+
+/* responsvie classes of 800px screen */
+@media only screen and (max-width: 800px) {
+
+    .container-width {
+        width: 78vw;
+    }
+}
+
+/* responsvie classes of 960px screen */
+@media only screen and (max-width: 960px) {
+    .buttonDisplay {
+        display: block;
+    }
+
+    .column1,
+    .column2 {
+        width: 100%;
+    }
+
+    .column1 {
+        order: 2;
+    }
+
+    .column2 {
+        order: 1;
+    }
+
+}
